@@ -2,17 +2,19 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <div className="navbar">
-      <div className="logo">
-        <div className="logo-img"></div>
-        <div className="logo-txt">GDSC<span>®</span></div>
-      </div>
-      <div className="links">
-        <button><span class="material-symbols-outlined">dark_mode</span></button>
-        <button><span class="material-symbols-outlined">light_mode</span></button>
-        <a href="/" className="">Home</a>
-        <a href="/" className="">About</a>
-        <a href="/" className="">Contact</a>
+    <div className="navbar font flex">
+      <a href='/'>
+        <div className="logo flex">
+            <span className="material-symbols-outlined logo-img">code</span>
+            <div className="logo-txt">GDSC</div>
+        </div>
+      </a>
+    <span className="material-symbols-outlined darkM">dark_mode</span>
+    <span className="material-symbols-outlined lightM">light_mode</span>
+      <div className="links flex">
+        <a href="/" className="link">Home</a>
+        <a href="/" className="link">About</a>
+        <a href="/" className="link">Contact</a>
       </div>
     </div>
   )

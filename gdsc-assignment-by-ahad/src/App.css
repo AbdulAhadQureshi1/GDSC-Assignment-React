@@ -1,14 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* GENERAL STYLING */
+
 *{
   box-sizing: border-box;
+  color: #121212;
 }
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(216, 216, 3);
 }
+
+a {
+  text-decoration: none;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
   'opsz' 48
+}
+
+.font {
+  font-family: 'Poppins', sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NAVBAR OVERALL */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1% 10% 1% 15%;
+  border-bottom: 2px solid;
+  justify-content: space-between;
+}
+
+/* STYLING LOGO */
+
+.logo {
+  gap: 10px;
+}
+
+.logo-img {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.logo-txt {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* STYLING LINKS */
+
+.links {
+  font-size: 1rem;
+}
+
+.link:hover::before {
+  transition: 500ms;
+  opacity: 1;
+}
+
+.link:hover::after {
+  transition: 500ms;
+  opacity: 1;
+}
+
+.link::after,.link::before {
+  transition: 200ms;
+  opacity: 0;
+  font-size: 20px;
+}
+
+.link::before {
+  content: '<  ';
+}
+
+.link::after {
+  content: '  />';
+}
+
+/* DARK/LIGHT MODE STYLING  */
+
+.darkM, .lightM {
+  transition: 200ms;
+  transform: translateX(150%);
+  cursor: pointer;
+}
+
+.darkM:hover, .lightM:hover {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.lightM {
+  display: none;
 }
