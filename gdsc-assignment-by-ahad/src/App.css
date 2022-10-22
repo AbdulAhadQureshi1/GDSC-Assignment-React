@@ -149,6 +149,34 @@ a {
   color: var(--themeBgColor);
 }
 
+/* CONTENT STYLING */
+
+.content {
+  flex-direction: column;
+  height: 90vh;
+  text-align: center;
+}
+
+.content > h1{
+  font-size: clamp(20px, 2vw, 70px);
+}
+
+.content > * {
+  font-size: clamp(16px, 1.5vw, 20px);
+}
+
+.content .statement {
+  width: 70%;
+}
+
+.content.light-enabled{
+  color: var(--themeFgColor);
+}
+
+.content.dark-enabled > *, .content.dark-enabled > * > *{
+  color: var(--themeBgColor);
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {

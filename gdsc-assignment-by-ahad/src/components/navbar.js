@@ -1,11 +1,12 @@
-import React from 'react'
-
-
+import React, {useContext} from 'react'
+import {ThemeContext, UpdateTheme} from './themeContext'
 
 export default function Navbar() {
 
+  const darkMode = useContext(ThemeContext);
+  const themeChange = useContext(UpdateTheme);
+
   const [menuState, setMenuState] = React.useState('menu-close');
-  const [darkMode, setDarkMode] = React.useState(false);
 
   function toggleMenu() {
     menuState==='menu-open' ? setMenuState('menu-close') : setMenuState('menu-open')
@@ -15,9 +16,6 @@ export default function Navbar() {
     return darkMode ? 'dark-enabled' : 'light-enabled'
   }
 
-  function themeChange() {
-    darkMode ? setDarkMode(false) : setDarkMode(true)
-  }
 
   document.body.style.backgroundColor = darkMode ? 'var(--themeFgColor)' : 'var(--themeBgColor)';
 

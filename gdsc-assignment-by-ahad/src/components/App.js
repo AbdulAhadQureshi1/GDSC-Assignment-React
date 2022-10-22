@@ -1,9 +1,14 @@
 import '../App.css'
+import Content from './Content';
 import Navbar from './navbar.js'
+import ThemeProvider from './themeContext.js'
 
 function App() {
   return (
-    <Navbar></Navbar>
+    <ThemeProvider>
+      <Navbar></Navbar>
+      <Content></Content>
+    </ThemeProvider>
   );
 }
 
